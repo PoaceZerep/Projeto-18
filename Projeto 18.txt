@@ -1,0 +1,44 @@
+class operComplexos:
+  def __init__(self,x,y,z):
+    self.x = x
+    self.y = y
+    self.z = z
+
+  def calculo(self):
+    return self.x,self.y,self.z
+
+  def soma(self):
+    return self.x+self.y+self.z
+   
+  def subtracao(self):
+    return self.x-self.y,self.y-self.z,self.x-self.z,self.y-self.x,self.z-self.y,self.z-self.x
+
+  def multiplicacao(self):
+    return self.x*self.y*self.z,self.x*self.y,self.y*self.z
+
+  def divisao(self):
+    
+    if self.x != 0:
+      return self.y/self.x, self.z/self.x
+    if self.y != 0:
+      return self.x/self.y, z/self.y
+    if self.z != 0:
+      return self.x/self.z, self.y/self.z
+    else:
+      return 'número divisor inválido'
+
+  def real(self):
+    return self.x.real,self.y.real,self.z.real
+
+  def imagem(self):
+    return self.x.imag,self.y.imag,self.z.imag
+
+OperComplex = operComplexos((2-4j),(5-9j),(4+15j))
+
+print(OperComplex.calculo())
+print(OperComplex.soma())
+print(OperComplex.subtracao())
+print(OperComplex.multiplicacao())
+print(OperComplex.divisao())
+print(OperComplex.real())
+print(OperComplex.imagem())
